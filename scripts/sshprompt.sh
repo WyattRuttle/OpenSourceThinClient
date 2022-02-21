@@ -5,10 +5,16 @@ sshout=$(
     --field="SSH Username:"
 )
 
-# Gets the ssh IP output and assigns it to the sship variable
-sship=$(echo $sshout | awk -F "|" '{ print $1 }')
+retVal=$?
 
-# Gets the ssh username output and assigns it to the sshuser variable
-sshuser=$(echo $sshout | awk -F "|" '{ print $2 }')
+if [ $retVal != 0 ]; then
+    exit 1
+else
+    # Gets the ssh IP output and assigns it to the sship variable
+    sship=$(echo $sshout | awk -F "|" '{ print $1 }')
 
-konsole -e ssh $sshuser@$sship
+    # Gets the ssh username output and assigns it to the sshuser variable
+    sshuser=$(echo $sshout | awk -F "|" '{ print $2 }')
+
+    konsole -e ssh $sshuser@$sship
+fi

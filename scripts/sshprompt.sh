@@ -1,8 +1,8 @@
 sshout=$(
-  yad --width 300 --height 80 --no-buttons --no-escape --title "Connect via ssh" \
+  yad --width 350 --height 80 --center --on-top --no-buttons --title "Connect via ssh" \
     --form \
-      --field="SSH Target IP:" \
-      --field="SSH Username:"
+    --field="SSH Target IP:" \
+    --field="SSH Username:"
 )
 
 # Gets the ssh IP output and assigns it to the sship variable

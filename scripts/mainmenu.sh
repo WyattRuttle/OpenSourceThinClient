@@ -7,5 +7,5 @@
     --field="X2Go:BTN" 'bash -c x2goclient' \
     --field="XPRA:BTN" 'bash -c xpra' \
     --field="Terminal:BTN" 'bash -c x-terminal-emulator' \
-    --field="SSH:BTN" 'bash -c "sh /home/user/Desktop/SEC-440/sshprompt.sh"' \
-    --field="Import WireGuard Config:BTN" 'bash -c "sh /home/user/Desktop/SEC-440/wgimport.sh"'
+    --field="SSH:BTN" 'bash -c "sh sshprompt.sh"' \
+    --field="Import WireGuard Config:BTN" 'bash -c " ./wgimport.sh"'

@@ -1,1 +1,0 @@
-zenity --password --title=Authentication

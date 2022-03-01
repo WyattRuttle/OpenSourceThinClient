@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#Script to set up custom thin client
+
+# Run this script when setting up a new OS to be used as the thin client 
+
+#Download git
+#sudo apt install git
+
+# Create user "kiosk" with password "kiosk"
+sudo adduser kiosk
+sermod -aG sudo kiosk
+# Set up Auto Login
+
+# Make kiosk script run on startup
+
+# Get required software
+sudo apt-get update -y
+
+# Install YAD
+sudo apt-get install -y yad
+
+# Install X2GO
+sudo apt-get install x2goclient
+
+# Install Remmina from Snap 
+sudo apt install snapd
+sudo snap install remmina
+
+# Install Wireguard
+sudo apt install wireguard

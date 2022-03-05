@@ -1,5 +1,4 @@
 #!/bin/bash
-
 creds=$(yad --width 350 --height 150 --center --on-top --no-buttons --title "Input Admin Credentials" \
     --text "The following action requires Administrative access. Please input the credentials of your account below, then click enter." \
     --form \
@@ -18,13 +17,12 @@ if [ $? -ne 0 ]; then
 
 
 elif [[ "$isadmin" = *"27(sudo)"* ]] || [[ "$isadmin" = *"uid=0(root)"* ]] ; then
-    yad --no-buttons --width 500 --height 300 --no-escape --on-top --title="What would you like to do with Wireguard?" \
+    yad --no-buttons --width 500 --height 300 --no-escape --on-top --title="What would you like to do with OpenVPN?" \
       --form \
-      --field="Import existing WireGuard config:BTN" 'bash -c "echo '${pass}' | sudo -S sh wireguard/wg-import.sh"' \
-      --field="Generate a new Wireguard config:BTN" 'bash -c "sudo -K | echo '${pass}' | sudo -S sh wireguard/wg-generate.sh"' \
-      --field="Enable Wireguard connection:BTN" 'bash -c "echo '${pass}' | sudo -S wg-quick up wg0"' \
-      --field="Disable Wireguard connection:BTN" 'bash -c "echo '${pass}' | sudo -S wg-quick down wg0"' \
-      --field="Check Wireguard status:BTN" 'bash -c "echo '${pass}' | sudo -S ./wireguard/wg-status.sh"'
+      --field="Import existing OpenVPN config:BTN" 'bash -c "echo '${pass}' | sudo -S sh openvpn/ovpn-import.sh"' \
+      --field="Enable OpenVPN connection:BTN" 'bash -c "sudo -K | echo '${pass}' | sudo -S bash openvpn/ovpn-connect.sh"' \
+      --field="Disable OpenVPN connection:BTN" 'bash -c "echo '${pass}' | sudo -S killall openvpn"' \
+      --field="Check OpenVPN status:BTN" 'bash -c "echo '${pass}' | sudo -S bash openvpn/ovpn-status.sh"'
 
 else
     yad --width 450 --height 100 --on-top --center --buttons-layout="center" --button=OK:1 --title "Provided user is not an administrator" \

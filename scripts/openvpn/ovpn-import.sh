@@ -5,12 +5,12 @@ retVal=$?
 if [ $retVal != 0 ]; then
     exit 1
 else
-    cp $outfile "/etc/wireguard/wg0.conf"
-    if test -f "/etc/wireguard/wg0.conf" ; then
+    cp $outfile "/etc/openvpn/client/imported-config.ovpn"
+    if test -f "/etc/openvpn/client/imported-config.ovpn" ; then
         yad --width 300 --height 100 --on-top --center --title "Successfully Imported" \
-        --text "WireGuard config was sucessfully imported"
+        --text "OpenVPN config was sucessfully imported"
     else
         yad --width 300 --height 100 --on-top --center --title "Failed to import config" \
-        --text "WireGuard config failed to import. There may be an issue with the permissions of your Wireguard directory."
+        --text "OpenVPN config failed to import. There may be a permissions issue present. If the error persists, contact your system administrator."
     fi
 fi

@@ -14,7 +14,7 @@ else
     tunnelstatus="Wireguard VPN tunnel is not active"
 fi
 
-yad --width 500 --height 150 --on-top --center --buttons-layout="center" --text-align="center" --button=Referesh:2 --button=Ok:0 --title "Wireguard status" \
+yad --width 500 --height 150 --on-top --center --buttons-layout="center" --text-align="center" --button=Refresh:2 --button=Ok:0 --title "Wireguard status" \
     --text "$confstatus\n\n$tunnelstatus"
 
 #If user clicks the refresh button, restart the script

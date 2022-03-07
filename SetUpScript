@@ -23,9 +23,17 @@ sudo apt-get install -y yad
 # Install X2GO
 sudo apt-get install x2goclient
 
-# Install Remmina from Snap 
-sudo apt install snapd
-sudo snap install remmina
+# Install Remmina
+sudo apt-get install remmina -y
 
 # Install Wireguard
-sudo apt install wireguard
+sudo apt-get install wireguard -y
+
+# Install konsole
+sudo apt-get install konsole -y
+
+# Install xpra
+sudo apt-get install xpra -y
+
+# Install OpenVPN
+sudo apt-get install openvpn -y

@@ -1,7 +1,7 @@
 # To run the script, simply execute "sh yadgui.sh"
 
 # Creats the GUI itself with the buttons, and field entries
-yad --height 600 --width 800 --no-buttons --title="Select from the opitons below" \
+yad --fullscreen --undecorated --no-buttons --title="Select from the opitons below" \
   --form \
   --field="Remmina:BTN" 'bash -c remmina' \
   --field="X2Go:BTN" 'bash -c x2goclient' \

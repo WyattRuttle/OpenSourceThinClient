@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=mainmenu
+Exec=/home/thinuser/.yadscripts/mainmenu.sh
+StartupNotify=false
+Terminal=false

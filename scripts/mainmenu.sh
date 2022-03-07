@@ -1,5 +1,7 @@
 # To run the script, simply execute "sh yadgui.sh"
-
+sleep 1
+# changes directory to location of the mainmenu file. Ensures it can access all other required scripts
+cd "${0%/*}"
 # Creats the GUI itself with the buttons, and field entries
 yad --fullscreen --undecorated --no-buttons --title="Select from the opitons below" \
   --form \

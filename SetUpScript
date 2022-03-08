@@ -10,9 +10,13 @@
 # Create user "kiosk" with password "kiosk"
 sudo adduser kiosk
 sermod -aG sudo kiosk
+
 # Set up Auto Login
 
 # Make kiosk script run on startup
+touch /etc/systemd/system/StartupKiosk.service
+sudo cp /Downloads/scripts/mainmenu.sh /usr/bin/mainmenu.sh
+echo -e “[Unit]\nDescription=Make Kiosk Script Run On Boot\n[Service]\nExecStart=/usr/bin/mainmenu.sh start\n[Install]\nWantedBy=multi-user.target” >> /etc/systemd/system/StartupKiosk.service
 
 # Get required software
 sudo apt-get update -y

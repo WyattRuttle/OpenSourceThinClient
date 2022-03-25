@@ -1,20 +1,18 @@
 #!/bin/bash
 
-creds=$(yad --width 350 --height 150 --center --on-top --no-buttons --title "Input Admin Credentials" \
-    --text "The following action requires Administrative access. Please input the credentials of your account below, then click enter." \
+creds=$(yad --width 350 --height 100 --undecorated --buttons-layout="center" --button=Cancel:3 --center --on-top --title "Input Admin Password" \
+    --text "The following action requires Administrative access. Please input your password, then click enter." \
     --form \
-    --field="Username:" \
     --field="Password:":H
 )
-#Gets username and password from the prompt and assigns them to variables
-uname=$(echo $creds | awk -F "|" '{ print $1 }')
-pass=$(echo $creds | awk -F "|" '{ print $2 }')
+canceloption=$?
+#Gets the input password from the prompt and assigns them to variables
+uname=$(whoami)
+pass=$(echo $creds | awk -F "|" '{ print $1 }')
 isadmin=$(id "$uname")
 
-if [ $? -ne 0 ]; then
-    yad --width 450 --height 100 --on-top --center --buttons-layout="center" --button=OK:1 --title "Provided user does not exsist" \
-        --text "The user provided does not exsist. Please input a valid username and password"
-    exit 1
+if [ $canceloption -eq 3 ]; then
+	exit
 
 
 elif [[ "$isadmin" = *"27(sudo)"* ]] || [[ "$isadmin" = *"uid=0(root)"* ]] ; then

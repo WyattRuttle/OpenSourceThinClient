@@ -3,7 +3,7 @@ sleep 1
 # changes directory to location of the mainmenu file. Ensures it can access all other required scripts
 cd "${0%/*}"
 # Creats the GUI itself with the buttons, and field entries
-yad --fullscreen --undecorated --no-buttons --title="Select from the opitons below" \
+yad --height=400 --width=550 --no-buttons --title="Select from the opitons below" \
   --form \
   --field="Remmina:BTN" 'bash -c remmina' \
   --field="X2Go:BTN" 'bash -c x2goclient' \

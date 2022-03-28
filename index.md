@@ -46,7 +46,4 @@ WantedBy=multi-user.target
 ```
 
 * Make the menu script executable: `chmod +x mainmenu.sh`
-
-
-[Link](url) and ![Image](src)
 ```

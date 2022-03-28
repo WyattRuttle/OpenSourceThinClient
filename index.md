@@ -2,7 +2,7 @@
 
 OpenSourceThinClient is a boot image which allows low-end PCs to be used as a thin-client to login to remote computers. The project is a modified version of Xubuntu Core that starts up into a simple menu for RDP and SSH services. The OS is as lightweight as possible so that it can be run using a USB with persistent storage. 
 
-#Download the ISO and create Bootable USB using Rufus
+## Download the ISO and create Bootable USB using Rufus
 https://rufus.ie/en/
 https://drive.google.com/file/d/1-OPYNKlGj93tYqQ7Cx7UUDcsYO2PVKAh/view?usp=sharing 
 # How did we create the OS?

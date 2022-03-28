@@ -1,6 +1,6 @@
 ## Welcome to OpenSourceThinClient
 
-OpenSourceThinClient is a boot image which allows low-end PCs to be used as a thin-client to login to remote computers. The project is a modified version of Xubuntu Core that starts up into a simple menu for RDP and SSH services. The OS is as lightweight as possible so that it can be run on low requirements using a USB with persistent storage. 
+OpenSourceThinClient is a boot image which allows low-end PCs to be used as a thin-client to login to remote computers. The project is a modified version of Xubuntu Core that starts up into a simple menu for RDP and SSH services. The OS is as lightweight as possible so that it can be run using a USB with persistent storage. 
 
 # How did we create the OS?
 The OS is a traditional Kiosk setup that boots into a custom YAD script. Here are the steps in order:

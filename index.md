@@ -21,6 +21,31 @@ For this project we are modifying Xubuntu into a kiosk a using the iso on live b
 * X2Go
 * XRPA
 * WireGuard
+```
+# Get required software
+sudo apt-get update -y
+
+# Install YAD
+sudo apt-get install -y yad
+
+# Install X2GO
+sudo apt-get install x2goclient
+
+# Install Remmina
+sudo apt-get install remmina -y
+
+# Install Wireguard
+sudo apt-get install wireguard -y
+
+# Install konsole
+sudo apt-get install konsole -y
+
+# Install xpra
+sudo apt-get install xpra -y
+
+# Install OpenVPN
+sudo apt-get install openvpn -y
+```
 3. Setup Auto Login
 * Edit lightdm.conf `sudo nano /etc/lightdm/lightdm.conf`
 > `[SeatDefaults]

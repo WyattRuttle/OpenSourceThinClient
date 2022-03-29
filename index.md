@@ -35,6 +35,7 @@ For this project we are modifying Xubuntu into a kiosk a using the iso on live b
 * X2Go
 * XRPA
 * WireGuard
+
 ```
 # Get required software
 sudo apt-get update -y

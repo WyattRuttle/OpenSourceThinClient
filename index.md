@@ -5,6 +5,17 @@ OpenSourceThinClient is a boot image which allows low-end PCs to be used as a th
 ## Download the ISO and create Bootable USB using Rufus
 * [Rufus](https://rufus.ie/en/)
 * [OSTC ISO File](https://drive.google.com/file/d/1-OPYNKlGj93tYqQ7Cx7UUDcsYO2PVKAh/view?usp=sharing) 
+# What is a bootable USB stick with persistent storage?
+A bootable USB with persistent storage is a USB drive that will boot up an OS and will contain the files from the last time it is used. The actions performed while using the OS will be save to the USB and can be accessed again the next time the USB is used.
+# How does this fit into our project?
+A bootable USB with persistent storage will be the vector for creating our thin client. Whenever a PC is to be used as a thin client, the USB will be plugged in, ran via the BIOS, and our custom Ubuntu OS will boot up into our menu. The bootable USB we create will need persistent storage so that when we start up our machine it opens to our kiosk-like version of Ubuntu. 
+## Process (creating from Windows)
+* Install and open [Rufus](https://rufus.ie/en/#)
+* Select the Ubuntu ISO file
+* Write the ISO
+* Change settings so that "Persistent partition size" is at least 6 GBs
+![Rufus Settings](https://github.com/WyattRuttle/OpenSourceThinClient/blob/main/RufusSettings.PNG?raw=true)
+* boot from USB via BIOS
 # How did we create the OS?
 The OS is a traditional Kiosk setup that boots into a custom YAD script. Here are the steps in order:
 1. Download Xubuntu Core and delete all unneccessary files

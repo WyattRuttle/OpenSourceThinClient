@@ -75,4 +75,3 @@ WantedBy=multi-user.target
 
 * Make the menu script executable: `chmod +x mainmenu.sh`
 ```
-

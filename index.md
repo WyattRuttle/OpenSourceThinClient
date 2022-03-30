@@ -24,7 +24,7 @@ The OS is a lightweight setup that boots a custom YAD script designed by our tea
 4. Create a user that auto logs in.
 5. Configure XFE to automatically open our menu after the desktop has loaded on boot. 
 
-We created a bash script to install all of the packages and dependcies automatically when executed:
+We created a bash script to install all of the packages and dependencies automatically when executed:
 ```
 # Update before installing packages
 sudo apt-get update -y
@@ -33,7 +33,7 @@ sudo apt-get update -y
 sudo apt-get install -y yad
 
 # Install X2GO
-sudo apt-get install x2goclient
+sudo apt-get install x2goclient -y
 
 # Install Remmina
 sudo apt-get install remmina -y

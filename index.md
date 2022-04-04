@@ -42,7 +42,7 @@ sudo apt-get install openvpn -y
 ```
 ### Configure the menu to run on boot
 * Download the required file from [here](https://github.com/WyattRuttle/OpenSourceThinClient/blob/release/startup.desktop)
-* * Make the menu scripts executable: `chmod -R +x /path/to/menuscripts`
+* Make the menu scripts are executable: `chmod -R +x /path/to/menuscripts`
 * Once downladed, edit the path on the `Exec` line so it points to the root folder of your scripts
 * Now move the file to the autostart directory, `mv startup.desktop /etc/xdg/autostart`
 * With the file moved there, everytime the system boots up the script will run once the user logs in.
